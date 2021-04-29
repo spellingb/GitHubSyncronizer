@@ -15,15 +15,14 @@ This is a Simple script used to keep repos in sync between GitHub.com and Enterp
 
 
 ```powershell
-.\Sync.ps1 -SyncDirection ent2git -Verbose
+.\Sync.ps1 -SyncDirection git2ent
 ```
 
 Output:
 ```
-
-VERBOSE: Origin: https://github.rackspace.com/bran6437/RXT-GITHUB-Sync.git
+VERBOSE: Origin: https://EnterpriseGitHub.Contoso.com/spellingb/GitHubSyncronizer.git
 VERBOSE: Secondary: https://github.com/spellingb/GitHubSyncronizer.git
-Cloning into bare repository 'RXT-GITHUB-Sync.git'...
+Cloning into bare repository 'GitHubSyncronizer.git'...
 POST git-upload-pack (146 bytes)
 POST git-upload-pack (190 bytes)
 remote: Enumerating objects: 19, done.
@@ -37,7 +36,7 @@ Are you sure you want to perform this action?
 Performing the operation "Sync Repos:" on target "Enterprise --> GitHub".
 [Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Yes"):
 POST git-upload-pack (126 bytes)
-From https://github.rackspace.com/bran6437/RXT-GITHUB-Sync
+From https://EnterpriseGitHub.Contoso.com/spellingb/GitHubSyncronizer.git
  = [up to date]      master     -> master
 Pushing to https://github.com/spellingb/GitHubSyncronizer.git
 Enumerating objects: 19, done.
@@ -51,9 +50,15 @@ remote: Resolving deltas: 100% (5/5), done.
 To https://github.com/spellingb/GitHubSyncronizer.git
  * [new branch]      master -> master
 updating local tracking ref 'refs/heads/master'
-
 ```
 
+## Config Samples
+```json
+{
+    "EnterpriseRepo": "https://EnterpriseGitHub.Contoso.com/spellingb/GitHubSyncronizer.git",
+    "GitHubRepo": "https://github.com/spellingb/GitHubSyncronizer.git",
+    "Primary": "Enterprise"
+}
+```
 
-## Installation
 
