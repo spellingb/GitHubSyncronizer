@@ -1,18 +1,3 @@
-# RXT-GITHUB-SYNC
-
-## Introduction
-
-This is a Simple script used to keep repos in sync between GitHub.com and Enterprise Github.
-## Getting started
-
-1.  Download to your computer
-2. Rename *SAMPLE.config.json* to *config.json*
-3. configure the config.json with your Repo locations
-4. Run the script, specifying your sync direction.
-
-
-## Code Samples
-
 
 ```powershell
 .\Sync.ps1 -SyncDirection git2ent
@@ -60,5 +45,3 @@ updating local tracking ref 'refs/heads/master'
     "Primary": "Enterprise"
 }
 ```
-
-
