@@ -15,45 +15,42 @@ This is a Simple script used to keep repos in sync between GitHub.com and Enterp
 
 
 ```powershell
-.\Sync.ps1 -SyncDirection git2ent
+.\Sync.ps1 -SyncDirection ent2git -Verbose
 ```
 
 Output:
 ```
 
-Cloning into bare repository 'SANIZED.git'...
+VERBOSE: Origin: https://github.rackspace.com/bran6437/RXT-GITHUB-Sync.git
+VERBOSE: Secondary: https://github.com/spellingb/GitHubSyncronizer.git
+Cloning into bare repository 'RXT-GITHUB-Sync.git'...
 POST git-upload-pack (146 bytes)
-POST git-upload-pack (390 bytes)
-remote: Enumerating objects: 70, done.
-remote: Counting objects: 100% (70/70), done.
-remote: Compressing objects: 100% (44/44), done.
-remote: Total 70 (delta 27), reused 63 (delta 20), pack-reused 0R
-Receiving objects: 100% (70/70), 22.63 KiB | 1007.00 KiB/s, done.
-Resolving deltas: 100% (27/27), done.
+POST git-upload-pack (190 bytes)
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 19 (delta 5), reused 14 (delta 3), pack-reused 0
+Receiving objects: 100% (19/19), done.
+Resolving deltas: 100% (5/5), done.
 Confirm
 Are you sure you want to perform this action?
-Performing the operation "Sync Repos:" on target "GitHub --> Enterprise".
+Performing the operation "Sync Repos:" on target "Enterprise --> GitHub".
 [Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Yes"):
-POST git-upload-pack (148 bytes)
-From https://github.com/spellingb/SANIZED
- = [up to date]      Port-Initial-Functions -> Port-Initial-Functions
- = [up to date]      master                 -> master
- = [up to date]      origin/Port-Initial-Functions -> origin/Port-Initial-Functions
- = [up to date]      origin/master          -> origin/master
- = [up to date]      v0.1.0                 -> v0.1.0
-Pushing to https://github.rackspace.com/gts-armor/SANIZED.git
-To https://github.rackspace.com/gts-armor/SANIZED.git
- = [up to date]      Port-Initial-Functions -> Port-Initial-Functions
- = [up to date]      master -> master
- = [up to date]      origin/Port-Initial-Functions -> origin/Port-Initial-Functions
- = [up to date]      origin/master -> origin/master
- = [up to date]      v0.1.0 -> v0.1.0
-updating local tracking ref 'refs/heads/Port-Initial-Functions'
+POST git-upload-pack (126 bytes)
+From https://github.rackspace.com/bran6437/RXT-GITHUB-Sync
+ = [up to date]      master     -> master
+Pushing to https://github.com/spellingb/GitHubSyncronizer.git
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (19/19), 3.28 KiB | 1.09 MiB/s, done.
+Total 19 (delta 5), reused 19 (delta 5), pack-reused 0
+POST git-receive-pack (3547 bytes)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/spellingb/GitHubSyncronizer.git
+ * [new branch]      master -> master
 updating local tracking ref 'refs/heads/master'
-updating local tracking ref 'refs/remotes/origin/Port-Initial-Functions'
-updating local tracking ref 'refs/remotes/origin/master'
-updating local tracking ref 'refs/tags/v0.1.0'
-Everything up-to-date
 
 ```
 
