@@ -1,6 +1,6 @@
 ﻿[CmdletBinding( SupportsShouldProcess, ConfirmImpact = 'High')]
 Param(
-    
+    [Parameter(Mandatory)]
     [ValidateSet('ent2git','git2ent')]
     $SyncDirection
 )
